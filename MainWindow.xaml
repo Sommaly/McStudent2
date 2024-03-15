@@ -1,0 +1,37 @@
+﻿<Window x:Class="GTP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GTP"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1500"
+        WindowStartupLocation="CenterScreen">
+    <Border Background="#272537">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200">
+
+                </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75">
+
+                </RowDefinition>
+            </Grid.RowDefinitions>
+            <Frame x:Name="main_frame" Margin="210,0,-1290,-699"></Frame>
+            <StackPanel Name="navbar_admin" Margin="10,231,-10,-276">
+                <RadioButton x:Name="rbtn_promo" Content="Promotions"
+                         Foreground="White"
+                         FontSize="30" Checked="rbtn_promo_Checked"/>
+                <RadioButton x:Name="rbtn_tp" Content="TP"
+                         Foreground="White"
+                         FontSize="30" Checked="rbtn_tp_Checked"/>
+                <RadioButton x:Name="rbtn_eleve" Content="Elèves"
+                         Foreground="White"
+                         FontSize="30" Checked="rbtn_eleve_Checked"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
