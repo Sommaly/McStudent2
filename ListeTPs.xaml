@@ -26,6 +26,7 @@
                     <GridViewColumn Header="Titre" DisplayMemberBinding="{Binding Titre}" />
                     <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Description}" />
                     <GridViewColumn Header="Promotion" DisplayMemberBinding="{Binding Promotion.Nom}" />
+                    <GridViewColumn Header="Tâches" />
                 </GridView>
             </ListView.View>
         </ListView>

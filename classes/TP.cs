@@ -11,11 +11,11 @@ namespace GTP.classes
         public int Id {  get; set; }
         public string Titre { get; set; }
         public string Description { get; set; }
-        public List<Jalon> Jalons { get; set; }
+        public List<Tache> Taches { get; set; }
         public Promotion Promotion { get; set; }
 
         public TP() { 
-            this.Jalons = new List<Jalon>();
+            this.Taches = new List<Tache>();
         }
     }
 }
