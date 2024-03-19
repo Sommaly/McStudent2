@@ -14,8 +14,6 @@ namespace GTP.classes
 
         public string Description { get; set; }
 
-        public Jalon Jalon { get; set; }
-
-
+        public TP TP { get; set; }
     }
 }
