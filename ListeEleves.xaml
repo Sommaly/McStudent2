@@ -32,15 +32,15 @@
         </ListView>
         <StackPanel Grid.Row="2" Grid.Column="1">
             <StackPanel Orientation="Horizontal">
-                <Label Content="Nom :"></Label>
+                <Label Content="Nom :" Foreground="White"></Label>
                 <TextBox x:Name="txtNom" Width="200"></TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Label Content="Prenom :"></Label>
+                <Label Content="Prenom :" Foreground="White"></Label>
                 <TextBox x:Name="txtPrenom" Width="200"></TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Label Content="Identifiant :"></Label>
+                <Label Content="Identifiant :" Foreground="White"></Label>
                 <TextBox x:Name="txtID" Width="200"></TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">

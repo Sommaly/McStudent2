@@ -47,6 +47,28 @@ namespace GTP.ados
             }
             return taches;
         }
+        public static List<Tache> VoirTaches(int idTP)
+        {
+            List<Tache> taches = new List<Tache>();
+            SqlConnection sqlc = Ado.OpenConnexion();
+            string query = "SELECT * FROM Tache WHERE fk_id_tp = "+idTP;
+            SqlCommand command = new SqlCommand(query, sqlc);
+            using (SqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    Tache t = new Tache();
+                    t.Id = reader.GetInt32(0);
+                    t.Titre = reader.GetString(1);
+                    t.Description = reader.GetString(2);
+                    TP tp = TPAdo.VoirTp().First(x => x.Id == reader.GetInt32(3));
+                    tp.Taches.Add(t);
+                    t.TP = tp;
+                    taches.Add(t);
+                }
+            }
+            return taches;
+        }
 
         public static void SupprimerTache(Tache t)
         {

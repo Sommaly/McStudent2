@@ -121,5 +121,17 @@ namespace GTP
             promotions = new ObservableCollection<Promotion>(PromotionAdo.VoirPromotions());
             cmbPromotion.ItemsSource = promotions;
         }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            if (button != null)
+            {
+                // Récupérer la valeur de l'ID
+                int idTP = (int)button.Tag;
+
+                // Naviguer vers une autre page en passant l'ID en tant que paramètre
+                NavigationService.Navigate(new ListeTaches(idTP));
+            }
+        }
     }
 }
