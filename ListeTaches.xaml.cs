@@ -36,7 +36,28 @@ namespace GTP
             taches = new ObservableCollection<Tache>(TacheAdo.VoirTaches(idTP));
             lvTaches.ItemsSource = taches;
         }
-        private void btnSupprimer_Click(object sender, RoutedEventArgs e)
+
+        private void btnAjouter_Click_1(object sender, RoutedEventArgs e)
+        {
+            Tache tache = new Tache();
+            tache.Titre = txtTitre.Text;
+            tache.Description = txtDescription.Text;
+            List<TP> lesTP = TPAdo.VoirTp();
+            TP leTP = lesTP[idTP];
+            tache.TP = leTP;
+            leTP.Taches.Add(tache);
+
+            TacheAdo.AjouterTache(tache);
+
+            txtTitre.Text = "";
+            txtDescription.Text = "";
+
+            int lID = leTP.Id;
+
+            Charger(lID);
+        }
+
+        private void btnSupprimer_Click_1(object sender, RoutedEventArgs e)
         {
             Tache t = lvTaches.SelectedItem as Tache;
             string sMessageBoxText = "Voulez-vous vraiment supprimer la tache sélectionnée ?";
@@ -60,20 +81,6 @@ namespace GTP
                     break;
             }
             Charger(t.TP.Id);
-        }
-        private void btnAjouter_Click(object sender, RoutedEventArgs e)
-        {
-            Tache tache = new Tache();
-            tache.Titre = txtTitre.Text;
-            tache.Description = txtDescription.Text;
-            //tache.TP = ;
-
-            TacheAdo.AjouterTache(tache);
-
-            txtTitre.Text = "";
-            txtDescription.Text = "";
-
-            Charger(idTP);
         }
     }
 }

@@ -19,7 +19,7 @@ namespace GTP.ados
             {
                 cmd.Parameters.Add("@param1", SqlDbType.VarChar).Value = t.Titre;
                 cmd.Parameters.Add("@param2", SqlDbType.VarChar).Value = t.Description;
-                cmd.Parameters.Add("@param3", SqlDbType.Int).Value = t.TP;
+                cmd.Parameters.Add("@param3", SqlDbType.Int).Value = t.TP.Id;
                 cmd.ExecuteNonQuery();
             }
             Ado.CloseConnexion(sqlc);

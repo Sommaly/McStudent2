@@ -38,8 +38,8 @@
                 <TextBox x:Name="txtDescription" Width="200"></TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Button Content="Enregistrer" x:Name="btnAjouter" HorizontalAlignment="Left"/>
-                <Button Content="Supprimer" x:Name="btnSupprimer" HorizontalAlignment="Left"/>
+                <Button Content="Enregistrer" x:Name="btnAjouter" HorizontalAlignment="Left" Click="btnAjouter_Click_1"/>
+                <Button Content="Supprimer" x:Name="btnSupprimer" HorizontalAlignment="Left" Click="btnSupprimer_Click_1"/>
             </StackPanel>
         </StackPanel>
     </Grid>
